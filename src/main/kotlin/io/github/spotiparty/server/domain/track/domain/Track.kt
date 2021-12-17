@@ -7,7 +7,7 @@ import javax.persistence.Index
 import javax.persistence.Table
 
 @Table(indexes = [Index(name = "i_track", columnList = "name")])
-@Entity
+@Entity(name = "tbl_track")
 class Track(
 
     @Column(length = 40, nullable = false)

@@ -8,7 +8,7 @@ import javax.persistence.FetchType
 import javax.persistence.JoinColumn
 import javax.persistence.ManyToOne
 
-@Entity
+@Entity(name = "tbl_playlist")
 class Playlist(
 
     @ManyToOne(fetch = FetchType.LAZY)

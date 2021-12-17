@@ -8,7 +8,7 @@ import java.time.LocalDateTime
 import javax.persistence.*
 
 @EntityListeners(AuditingEntityListener::class)
-@Entity
+@Entity(name = "tbl_message")
 class Message(
 
     @Column(nullable = false)
