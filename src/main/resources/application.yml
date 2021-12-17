@@ -1,1 +1,18 @@
+spring:
+  jackson:
+    property-naming-strategy: SNAKE_CASE
+  datasource:
+    url: jdbc:mysql://${DB_URL}:3306/${DB_NAME}?useSSL=false&characterEncoding=UTF-8&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true
+    username: ${DB_USER}
+    password: ${DB_PASS}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      maxLifetime: 580000
 
+jwt:
+  secret-key: ${JWT_SECRET}
+  header: ${JWT_HEADER}
+  prefix: ${JWT_PREFIX}
+  exp:
+    access: ${ACCESS_EXP}
+    refresh: ${REFRESH_EXP}
