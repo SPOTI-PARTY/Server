@@ -9,6 +9,8 @@ enum class ErrorCode(
 ) {
 
     BAD_REQUEST(400, "Bad request."),
-    NOT_FOUND(404, "Not found.")
+    NOT_FOUND(404, "Not found."),
+
+    USER_NOT_FOUND(404, "User not found.")
 
 }
