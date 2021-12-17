@@ -9,7 +9,7 @@ class ErrorResponse(
         return "{" +
                 "\n\t\"status\": " + status +
                 ",\n\t\"message\": \"" + message + '\"' +
-                '}';
+                '}'
     }
 
 }
