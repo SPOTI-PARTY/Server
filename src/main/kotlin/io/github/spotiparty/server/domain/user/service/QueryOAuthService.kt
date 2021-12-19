@@ -1,6 +1,7 @@
 package io.github.spotiparty.server.domain.user.service
 
 import io.github.spotiparty.server.domain.user.exception.InvalidTypeException
+import io.github.spotiparty.server.domain.user.presentation.dto.response.QueryOAuthResponse
 import io.github.spotiparty.server.domain.user.properties.*
 import io.github.spotiparty.server.global.domain.types.Company
 import org.springframework.stereotype.Service
@@ -10,7 +11,7 @@ class QueryOAuthService(
     val oAuthProperties: OAuthProperties
 ) {
 
-    fun execute(type: String): String {
+    fun execute(type: String): QueryOAuthResponse {
         val oauth = when (type) {
             Company.GOOGLE.name -> Google(oAuthProperties)
             Company.SPOTIFY.name -> Spotify(oAuthProperties)
@@ -18,7 +19,13 @@ class QueryOAuthService(
             else -> throw InvalidTypeException.EXCEPTION
         }
 
-        return oauth.getBaseUrl() + String.format(oauth.getQueryString(), oauth.getClientId(), oauth.getRedirectUrl())
+        return QueryOAuthResponse(
+            oauth.getBaseUrl() + String.format(
+                oauth.getQueryString(),
+                oauth.getClientId(),
+                oauth.getRedirectUrl()
+            )
+        )
     }
 
 }

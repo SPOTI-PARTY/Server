@@ -35,7 +35,7 @@ internal class QueryOAuthServiceTest {
         val response = queryOAuthService.execute("GOOGLE")
 
         //then
-        assertEquals(googleBaseUrl + String.format(googleQueryString, googleClient, googleRedirectUrl), response)
+        assertEquals( response.link, googleBaseUrl + String.format(googleQueryString, googleClient, googleRedirectUrl))
 
     }
 
@@ -60,7 +60,7 @@ internal class QueryOAuthServiceTest {
         val response = queryOAuthService.execute("SPOTIFY")
 
         //then
-        assertEquals(response, spotifyBaseUrl + String.format(spotifyQueryString, spotifyClient, spotifyRedirectUrl))
+        assertEquals(response.link, spotifyBaseUrl + String.format(spotifyQueryString, spotifyClient, spotifyRedirectUrl))
 
     }
 
@@ -85,7 +85,7 @@ internal class QueryOAuthServiceTest {
         val response = queryOAuthService.execute("APPLE")
 
         //then
-        assertEquals(response, appleBaseUrl + String.format(appleQueryString, appleClient, appleRedirectUrl))
+        assertEquals(response.link, appleBaseUrl + String.format(appleQueryString, appleClient, appleRedirectUrl))
     }
 
     @Test
