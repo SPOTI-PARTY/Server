@@ -16,3 +16,23 @@ jwt:
   exp:
     access: ${ACCESS_EXP}
     refresh: ${REFRESH_EXP}
+
+oauth:
+  google:
+    client-id: ${GOOGLE_CLIENT}
+    client-secret: ${GOOGLE_SECRET}
+    base-url: ${GOOGLE_BASE}
+    redirect-url: ${GOOGLE_REDIRECT}
+    query-string: ${GOOGLE_QUERY}
+  spotify:
+    client-id: ${SPOTIFY_CLIENT}
+    client-secret: ${SPOTIFY_SECRET}
+    base-url: ${SPOTIFY_BASE}
+    redirect-url: ${SPOTIFY_REDIRECT}
+    query-string: ${SPOTIFY_QUERY}
+  apple:
+    client-id: ${APPLE_CLIENT}
+    client-secret: ${APPLE_SECRET}
+    base-url: ${APPLE_BASE}
+    redirect-url: ${APPLE_REDIRECT}
+    query-string: ${APPLE_QUERY}

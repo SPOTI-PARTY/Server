@@ -1,6 +1,6 @@
 package io.github.spotiparty.server.domain.track.domain
 
-import io.github.spotiparty.server.domain.track.domain.types.Company
+import io.github.spotiparty.server.global.domain.types.Company
 import io.github.spotiparty.server.global.domain.BaseUUIDEntity
 import javax.persistence.*
 
