@@ -4,4 +4,5 @@ import io.github.spotiparty.server.domain.room.domain.Room
 import org.springframework.data.repository.CrudRepository
 
 interface RoomRepository: CrudRepository<Room, String> {
+    fun findByName(name: String): Room?
 }
