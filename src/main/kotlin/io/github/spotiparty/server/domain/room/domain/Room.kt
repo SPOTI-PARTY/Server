@@ -8,6 +8,9 @@ import javax.persistence.*
 @Entity(name = "tbl_room")
 class Room(
 
+    @Column(length = 40, nullable = false)
+    val name: String,
+
     @Column(columnDefinition = "BIT(1)", nullable = false)
     val isPublic: Boolean,
 
